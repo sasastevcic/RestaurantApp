@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col">
+        <dr-pagination [totalItems]="restaurants?.count" [pageSize]="parameters.pageSize" (pageChange)="pageChanged($event)" [params]="parameters"></dr-pagination>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4" *ngFor="let r of restaurants?.results">
+        <dr-restaurant-list [restaurant]="r"></dr-restaurant-list>
+    </div>
+</div>
